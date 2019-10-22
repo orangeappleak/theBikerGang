@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Biker Gang</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "login.css">
+        <link rel="stylesheet" media="(max-width: 600px)" href="max-600px.css">
+        <script src="home.js"></script>
+        <script src="login_panel.js"></script>
+        <script src="explore_bikes.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="background_image">
+            <img id="firstBg" src = "unsplash%20walls/firstBG.jpg">
+            <img id="secondBg" src = "unsplash%20walls/secondBg.jpg">
+        </div>
+
+        <div id="nav_bar">
+            <img id="logo" src="unsplash%20walls/logo14.jpg">
+            <div id="links">
+                <div id="windandspeed_link">
+                    <div id="animate_link">
+                        <div id="animate_link2"></div>
+                        <a href="#">Wind and speed</a>
+                    </div>
+                </div>
+                <div id="exclusivelaunch_link">
+                     <div id="animate_link">
+                        <div id="animate_link2"></div>
+                        <a href="#">Exclusive Launch</a>
+                    </div>
+                </div>
+                <div id="login_link">
+                   <div id="animate_link">
+                        <div id="animate_link2"></div>
+                        <a href="#" onclick="login_panel()">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1 id="partOne">WHAT WE PROVIDE</h1>
+            <p id="info">We provide some of the best hand made Bicycles that you can enjoy your ride on.
+Wonder how we make them ? check out how our BIKES are made.</p>
+            <div id="button">
+                <div id="button_animate">
+                    <img id="back_arrow" src="unsplash%20walls/icons8-back-arrow-96.png">
+                </div>
+                <h1 id="explore_bikes">EXPLORE BIKES</h1>
+            </div>
+        </div>
+        <h1 id="hashtag">#windandspeed</h1>
+
+         <div class="hamburger_menu" >
+             <div id="animate_menu1">
+                     <div id = "content_nos">
+                     <div id="one" style="margin-top: 200px">
+                        <h1 style="opacity: 0.5">0</h1>
+                         <div class="menu_links" id="menu_links">
+                             <div id="menu_link_animate"></div>
+                             <div id="menu_link_animate2"></div>
+                            <a src="#">Home</a>
+                         </div>
+                        <h1 style="opacity: 0.5">1</h1>
+                     </div>
+                     <div id = "line"></div>
+                     <div id="two">
+                        <h1 style="opacity: 0.5">0</h1>
+                         <div class="menu_links" id="menu_links">
+                             <div id="menu_link_animate"></div>
+                             <div id="menu_link_animate2"></div>
+                            <a src="#">Company</a>
+                         </div>
+                         <a src="#" id = "team_link">Team</a>
+                        <h1 style="opacity: 0.5">2</h1>
+                     </div>
+                     <div id = "line"></div>
+                     <div id="three">
+                        <h1 style="opacity: 0.5">0</h1>
+                        <div class="menu_links" id="menu_links">
+                             <div id="menu_link_animate"></div>
+                            <div id="menu_link_animate2"></div>
+                            <a src="#">How we work</a>
+                         </div>
+                        <h1 style="opacity: 0.5">3</h1>
+                     </div>
+                     <div id = "line"></div>
+                     <div id="four">
+                        <h1 style="opacity: 0.5">0</h1>
+                         <div class="menu_links" id="menu_links">
+                             <div id="menu_link_animate"></div>
+                             <div id="menu_link_animate2"></div>
+                            <a src="#">Contact</a>
+                         </div>
+                        <h1 style="opacity: 0.5">4</h1>
+                     </div>
+                     <div id = "line" style="height: 0.4%;width:100%;border-radius: 1000px;left:-10px"></div>
+                 </div>
+                 <div id="social_media">
+                     <a href="#"><img width="3%" src="unsplash%20walls/icons8-instagram-512.png"/></a>
+                     <a href="#"><img width="3%" src="unsplash%20walls/icons8-facebook-512.png"/></a>
+                     <a href="#"><img width="3%" src="unsplash%20walls/icons8-twitter-512.png"/></a>
+                 </div>
+             </div>
+             <div id="animate_menu2" onclick="openNav()"></div>
+             <div class="bar1" id = "bar1"></div>
+             <div class="bar2" id = "bar2"></div>
+             <div class="bar3" id = "bar3"></div>
+        </div>
+
+        <div id="sliders">
+            <div id="slider1" onclick="slider1()"></div>
+            <div id="divide_line"></div>
+            <div id="slider2" onclick="slider2()"></div>
+            <div id="divide_line"></div>
+            <div id="slider3" onclick="slider3()"></div>
+        </div>
+        <div id="login_window">
+            <img id="login_backwall" src="unsplash%20walls/login_backwall.jpg">
+            <div onclick="close_panel()" id="exit" ><img src = "unsplash%20walls/icons8-expand-arrow-52.png"></div>
+            <div id="panel">
+                <h1 id="panel_heading">Your account, Your preferences</h1>
+                <form id="login_info" action="#">
+                    <input placeholder="username" id="username" type="text" name="username">
+                    <input placeholder="password" id="password" type="password" name="password">
+                    <div id="submit">
+                        <div id="submit_animate"></div>
+                        <input type="button" value="Log In" name="submit" id="submit_button">
+                    </div>
+                </form>
+                <a href="#" id="register">If you dont have an account,register</a>
+            </div>
+        </div>
+    </body>
+</html>

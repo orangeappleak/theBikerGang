@@ -1,0 +1,83 @@
+body{
+    background: black;
+}
+
+#logo{
+    padding: 40px;
+    width: 30%;
+    position: relative;
+}
+
+#nav_bar #links{
+    font-size: 40px;
+    width: 110%;
+    position: relative;
+    border: 2px solid white;
+}
+
+#windandspeed_link{
+    border: 2px solid white;
+}
+
+#animate_link2{
+    width: 10%;
+}
+
+#background_image #firstBg{
+    width: 800%;
+    top: 155%;
+    left: -650px;
+    position: absolute;
+    z-index: -2;
+}
+
+#nav_bar{
+    position: relative;
+    width: 250%;
+    border: 0.1px solid white;
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav_bar #links{
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+}
+
+#content{
+    top: 700px;
+    border: 2px solid white;
+    position: fixed;
+    left: 0px;
+    padding: 20px;
+    width: 97%;
+}
+
+#content #partOne{
+    font-size: 200px;
+}
+
+#content #info{
+    position: relative;
+    font-size: 70px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.hamburger_menu{
+    position: absolute;
+    width: 20%;
+    top: 0px;
+    margin: 0px;
+    left: 380%;
+    top: 11%;
+}
+
+#animate_menu1{
+    position: absolute;
+    height: 10000%;
+    width: 2060%;
+    left: -1600px;
+}

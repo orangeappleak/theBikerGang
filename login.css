@@ -1,0 +1,147 @@
+#login_window{
+    position: absolute;
+    width: 99.8%;
+    border: 2px solid white;
+    height: 110%;
+    transform: translateY(950px);
+    border-radius: 90px;
+    opacity: 0.1;
+    overflow: hidden;
+    transition: transform,opacity 1s,0.5s ease;
+}
+
+#login_backwall{
+    position: absolute;
+    width: 100%;
+}
+
+#panel{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    border-radius: 100px;
+}
+
+#exit img{
+    position: absolute;
+    opacity: 0.5;
+    left: 48%;
+    top: 5%;
+    transform: scale(1.3);
+    transition: transform,opacity 0.2s,0.5s ease-in-out;
+}
+
+#exit img:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+#panel_heading{
+    position: absolute;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    top: 100px;
+    font-family: 'Gochi Hand';
+}
+
+#login_info{
+    padding: 50px;
+    display: grid;
+    width: 50%;
+    top: 30px;
+    position: relative;
+    margin-left: 56%;
+}
+
+#username, #password{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    width: 40%;
+    opacity: 0.6;
+    text-align: center;
+    font-size: 34px;
+    border-radius: 500px;
+    transition: width,opacity 0.1s,0.5s;
+}
+
+#username:hover,#password:hover{
+    width: 60%;
+    opacity: 1;
+}
+
+#username:focus, #password:focus{
+    outline: none;
+    width: 60%;
+    transform: scale(1.07);
+    opacity: 1;
+}
+
+#submit{
+    position: relative;
+    height: 200%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 1000px;
+}
+
+#submit_button{
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: 'Inconsolata';
+    border-radius: 1000px;
+    transition: background,color,transform 1s,0.4s ease-in-out;
+}
+
+#submit_button:focus{
+    outline: none;
+    filter: blur(20);
+}
+
+#submit_button:hover{
+    background: white;
+    color: black;
+    transform: scale(1.4);
+}
+
+#register{
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Incosolata';
+    font-weight: 100;
+    position: relative;
+    text-decoration: none;
+    margin-left: 38%;
+    opacity: 0.4;
+    top: 400px;
+    transition: opacity 0.4s ease;
+}
+
+#register:hover{
+    opacity: 1;
+}
+
+
+@keyframes arrow{
+    from{
+        transform: rotate(270deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}

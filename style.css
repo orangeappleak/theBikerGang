@@ -1,0 +1,545 @@
+@import 'https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed';
+@import 'https://fonts.googleapis.com/css?family=Bungee Inline';
+@import 'https://fonts.googleapis.com/css?family=Gochi Hand';
+@import 'https://fonts.googleapis.com/css?family=Jockey One';
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+body{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: black;
+    overflow: hidden;
+    animation: body_opacity 0.5s ease-in-out;
+}
+
+
+#logo{
+    position: relative;
+    border-radius: 1000px;
+    width: 15%;
+    padding: 30px;
+    opacity: 0.85;
+    transform: rotateY(180deg);
+    animation: logo 1.5s;
+}
+
+#hashtag{
+    color: white;
+    font-family: Inconsolata;
+    font-weight: 10;
+    position: fixed;
+    top: 84%;
+    opacity: 0.3;
+    left: 10%;
+    animation: opacity 1s ease-in;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+#background_image #firstBg{
+    position: fixed;
+    width: 100%;
+    margin-left: 20%;
+    bottom: 2px;
+    opacity: 0.78;
+    z-index: -1;
+    transition: transform 2.5s ease;
+    animation: background_image 1s ease-in-out;
+}
+
+#background_image #secondBg{
+    position: fixed;
+    width: 100%;
+    margin-left: 70%;
+    bottom: 2px;
+    transform: translateX(1500px);
+    transition: transform 2.5s ease;
+    z-index: -1;
+}
+
+#nav_bar{
+    position: absolute;
+}
+
+#links{
+    display: flex;
+    position: relative ;
+    font-size: 30px;
+    font-family: 'Inconsolata';
+    padding: 20px;
+    top: -100px;
+    left: 200px;
+    margin: 0px;
+    color: white;
+}
+
+#links a{
+    width: 60%;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 50px;
+    text-decoration: none;
+    transition: transform 1s ease;
+}
+
+#animate_link{
+    width: 100%;
+    height: 150%;
+    position: relative;
+    overflow: hidden;
+    transition: transform,opacity 0.6s,0.6s ease;
+}
+
+#animate_link2{
+    width: 100%;
+    height: 65%;
+    transform: translateX(-400px);
+    justify-content: center;
+    position: absolute;
+    border-bottom: 2px solid white;
+    opacity: 0.7;
+    transition: transform 0.5s;
+}
+
+#windandspeed_link, #exclusivelaunch_link,#login_link{
+    opacity: 0.6;
+    transition: transform 0.4s ease-in-out;
+}
+
+#windandspeed_link:hover #animate_link2{
+    transform: translateX(0px);
+}
+
+#windandspeed_link:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+#exclusivelaunch_link:hover #animate_link2{
+    transform: translateX(0px);
+}
+
+#exclusivelaunch_link:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+#login_link:hover #animate_link2{
+    transform: translateX(0px);
+}
+
+#login_link:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.hamburger_menu{
+    position: absolute;
+    display: inline-block;
+    width: 4%;
+    height: 5%;
+    left: 93.5%;
+    top: 5%;
+}
+
+.bar1, .bar2, .bar3{
+    height: 10%;
+    width: 50%;
+    margin: 5.6px;
+    background: white;
+    position: relative;
+    border-radius: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width,color,transform,opacity 0.5s,0.6s,1s,1s ease-in-out;
+    pointer-events: none;
+}
+
+.bar1{
+    animation: menu_bar1 0.5s ease-out;
+}
+
+.bar2{
+    animation: menu_bar2 0.7s ease-out;
+}
+
+.bar3{
+    animation: menu_bar3 1s ease-out;
+}
+
+#animate_menu1{
+    position: absolute;
+    background: white;
+    width: 2600%;
+    top: -90px;
+    left: -1800px;
+    height: 2500%;
+    clip-path: circle(0% at 1839px 108px);
+    transition: all 0.7s ease-in;
+    overflow: hidden;
+}
+
+#animate_menu2{
+    position: absolute;
+    background: pink;
+    opacity: 1;
+    width: 2600%;
+    top: -90px;
+    left: -1800px;
+    height: 2500%;
+    clip-path: circle(0% at 1839px 108px);
+    transition: all 0.7s ease;
+    overflow: hidden;
+    box-shadow: 10px 10px 80px black;
+}
+
+.hamburger_menu:hover #animate_menu2{
+    clip-path: circle(3% at 1839px 108px);
+    opacity: 1;
+}
+
+
+#content{
+    position: absolute;
+    width: 50%;
+    top: 250px;
+    padding: 34px;
+    left: 120px;
+    transition: transform 2.5s ease;
+    
+}
+
+#content #partOne{
+    word-spacing: 10px;
+    letter-spacing: 10px;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    font-size: 100px;
+    font-family: 'Jockey One';
+    animation: content_heading 1s;
+}
+
+#content #info{
+    position: relative;
+    top: -50px;
+    color: white;
+    opacity: 0.7;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Inconsolata';
+    animation: content_info 1s;
+}
+
+#button{
+    position: absolute;
+    width: 34%;
+    height: 19%;
+    border-radius: 1000px;
+    left: 340px;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    animation: explore_bikes_button 1.5s;
+}
+
+#explore_bikes{
+    position: absolute;
+    color: white;
+    font-family: 'IBM Plex Sans Condensed';
+    font-size: 30px;
+    letter-spacing: 3px;
+    left: 0px;
+    font-weight: 500;
+    padding-left: 20px;
+    transition: left 0.6s;
+    opacity: 0.7;
+    cursor: pointer;
+    animation: explore_bikes_text 1s;
+}
+
+#button_animate{
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    background: white;
+    border-radius: 1000px;
+    top: 0px;
+    left: 270px;
+    transition: left 0.56s;
+}
+
+#back_arrow{
+    position: relative;
+    width: 20%;
+    top: 2px;
+    opacity: 0.5;
+    left: 2px;
+    transition: transform 0.5s;
+}
+
+
+#button:hover #button_animate{
+    left: -1px;
+    opacity: 1;
+}
+
+#button:hover #back_arrow{
+    transform: rotateZ(180deg);
+    opacity: 0.8;
+}
+
+
+#button:hover #explore_bikes{
+    color: black;
+    left: 70px;
+}
+
+#one,#two,#three,#four{
+    width: 10%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+    left: 120px;
+}
+
+#line{
+    position: absolute; 
+    background-color: black;
+    width: 80%;
+    height: 0.1%;
+    left: 150px;
+    margin-top: -10px;
+}
+
+#menu_links{
+    position: absolute;
+    color: black;
+    left: 550px;
+    top: 1px;
+    font-size: 100px;
+    width: 300%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform,opacity 1s,0.5s ease;
+    opacity: 0.7;
+}
+
+#team_link{
+    position: absolute;
+    top: 35px;
+    left: 1200px;
+    font-size: 50px;
+    opacity: 0.5;
+    transition: opacity,transform 0.4s,0.6s;
+    cursor: pointer;
+}
+
+#menu_links:hover{
+    transform: scale(1.3);
+    opacity: 1;
+    color: black;
+}
+
+#team_link:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+
+#social_media{
+    position: relative;
+    overflow: hidden;
+    top: 6.5%;
+}
+
+#social_media img{
+    opacity: 0.6;
+    position: relative;
+    left: 75%;
+    filter: grayscale(100%);
+    transition: transform,opacity,filter 0.5s,0.5s,0.5s;
+}
+
+#social_media img:hover{
+    filter: grayscale(0);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+#sliders{
+    position: fixed;
+    width: 97.89%;
+    display: flex;
+    padding: 20px;
+    height: 5%;
+    top: 90%;
+}
+
+#slider1, #slider2, #slider3{
+    opacity: 0.6;
+    position: relative;
+    display: inline-block;
+    width: 2.6%;
+    height: 40%;
+    border-radius: 1000px;
+    background-color: white;
+    left: 39%;
+    transform: scale(0.7);
+    transition: transform,opacity 1s,0.5s;
+    cursor: pointer;
+}
+
+#slider1:hover, #slider2:hover, #slider3:hover{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#divide_line{
+    position: relative;
+    left: 733px;
+    top: 9px;
+    width: 5%;
+    height: 4%;
+    opacity: 0.4;
+    background-color: white; 
+}
+
+@keyframes body_opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.3;
+    }
+}
+
+@keyframes explore_bikes_button{
+    from{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
+
+@keyframes explore_bikes_text{
+    from{
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+
+@keyframes content_heading{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes content_info{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes menu_bar1{
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes menu_bar2{
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes menu_bar3{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes background_image{
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 0.78;
+    }
+}
+
+@keyframes menu_links_animate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.66;
+    }
+}
+
+@keyframes logo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.85;
+    }
+}
+
+@media screen (max-width:600px){
+    #partOne{
+        color: red;
+    }
+}
+
+
