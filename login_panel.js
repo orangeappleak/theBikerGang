@@ -11,7 +11,7 @@ function login_panel(){
     }
     
     else if(count1%2!=0){
-        panel.style.transform = "translateY(950px)"
+        panel.style.transform = "translateY(110vh)"
         panel.style.opacity = "0.1";
         animate_menu2.style.pointerEvents = "auto";
     }
@@ -22,7 +22,7 @@ function close_panel(){
     panel = document.getElementById("login_window");
     animate_menu2 = document.getElementById("animate_menu2");
     login_link = document.getElementById("login_link");
-    panel.style.transform = "translateY(950px)"
+    panel.style.transform = "translateY(110vh)"
     panel.style.opacity = "0.1";
     animate_menu2.style.pointerEvents = "auto";
     count1--;

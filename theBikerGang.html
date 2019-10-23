@@ -4,11 +4,17 @@
         <title>The Biker Gang</title>
         <link rel = "stylesheet" href = "style.css">
         <link rel = "stylesheet" href = "login.css">
-        <link rel="stylesheet" media="(max-width: 600px)" href="max-600px.css">
         <script src="home.js"></script>
         <script src="login_panel.js"></script>
         <script src="explore_bikes.js"></script>
+        <script src="login_check.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+        <script src="src/params.inc.js"></script>
+        <script src="src/firebase.js"></script>
     </head>
     <body>
         <div id="background_image">
@@ -19,22 +25,16 @@
         <div id="nav_bar">
             <img id="logo" src="unsplash%20walls/logo14.jpg">
             <div id="links">
-                <div id="windandspeed_link">
-                    <div id="animate_link">
-                        <div id="animate_link2"></div>
-                        <a href="#">Wind and speed</a>
-                    </div>
-                </div>
-                <div id="exclusivelaunch_link">
-                     <div id="animate_link">
-                        <div id="animate_link2"></div>
-                        <a href="#">Exclusive Launch</a>
-                    </div>
-                </div>
                 <div id="login_link">
                    <div id="animate_link">
                         <div id="animate_link2"></div>
                         <a href="#" onclick="login_panel()">Log In</a>
+                    </div>
+                </div>
+                 <div id="register_link">
+                   <div id="animate_link">
+                        <div id="animate_link2"></div>
+                        <a href="register.html">Register</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ Wonder how we make them ? check out how our BIKES are made.</p>
                 <div id="button_animate">
                     <img id="back_arrow" src="unsplash%20walls/icons8-back-arrow-96.png">
                 </div>
-                <h1 id="explore_bikes">EXPLORE BIKES</h1>
+                <h1 id="explore_bikes"><a href="products_page.html">EXPLORE BIKES</a></h1>
             </div>
         </div>
         <h1 id="hashtag">#windandspeed</h1>
@@ -122,12 +122,12 @@ Wonder how we make them ? check out how our BIKES are made.</p>
             <div onclick="close_panel()" id="exit" ><img src = "unsplash%20walls/icons8-expand-arrow-52.png"></div>
             <div id="panel">
                 <h1 id="panel_heading">Your account, Your preferences</h1>
-                <form id="login_info" action="#">
-                    <input placeholder="username" id="username" type="text" name="username">
+                <form id="login_info" onsubmit="login_check();return false">
+                    <input placeholder="email" id="email" type="email" name="username">
                     <input placeholder="password" id="password" type="password" name="password">
                     <div id="submit">
                         <div id="submit_animate"></div>
-                        <input type="button" value="Log In" name="submit" id="submit_button">
+                        <input type="submit" value="Log In" name="submit" id="submit_button">
                     </div>
                 </form>
                 <a href="#" id="register">If you dont have an account,register</a>

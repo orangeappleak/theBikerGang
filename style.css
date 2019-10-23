@@ -4,11 +4,13 @@
 @import 'https://fonts.googleapis.com/css?family=Jockey One';
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
-body{
+html, body{
     margin: 0;
     padding: 0;
-    width: auto;
+    height: 100%;
+    width: 100%;
     background-color: black;
+    display: block;
     overflow: hidden;
     animation: body_opacity 0.5s ease-in-out;
 }
@@ -17,8 +19,7 @@ body{
 #logo{
     position: relative;
     border-radius: 1000px;
-    width: 15%;
-    padding: 30px;
+    height: 4em;
     opacity: 0.85;
     transform: rotateY(180deg);
     animation: logo 1.5s;
@@ -31,20 +32,20 @@ body{
     position: fixed;
     top: 84%;
     opacity: 0.3;
+    z-index: 5;
     left: 10%;
     animation: opacity 1s ease-in;
-    z-index: 2;
     pointer-events: none;
 }
 
 
 #background_image #firstBg{
     position: fixed;
-    width: 100%;
-    margin-left: 20%;
-    bottom: 2px;
-    opacity: 0.78;
-    z-index: -1;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 2;
     transition: transform 2.5s ease;
     animation: background_image 1s ease-in-out;
 }
@@ -52,37 +53,41 @@ body{
 #background_image #secondBg{
     position: fixed;
     width: 100%;
-    margin-left: 70%;
-    bottom: 2px;
-    transform: translateX(1500px);
+    margin-left: 5%;
+    bottom: 0;
+    opacity: .5;
+    transform: translateX(500vw);
     transition: transform 2.5s ease;
-    z-index: -1;
+    z-index: 1;
 }
 
 #nav_bar{
     position: absolute;
+    width: 100%;
+    margin: 1em;
+    display: flex;
+    z-index: 4;
+    align-items: center;
+    overflow: hidden;
 }
 
 #links{
     display: flex;
-    position: relative ;
     font-size: 30px;
     font-family: 'Inconsolata';
     padding: 20px;
-    top: -100px;
-    left: 200px;
     margin: 0px;
     color: white;
 }
 
 #links a{
-    width: 60%;
     text-align: center;
     position: relative;
     color: white;
-    padding: 50px;
+    padding: 0 50px;
     text-decoration: none;
     transition: transform 1s ease;
+    white-space: nowrap;
 }
 
 #animate_link{
@@ -104,7 +109,7 @@ body{
     transition: transform 0.5s;
 }
 
-#windandspeed_link, #exclusivelaunch_link,#login_link{
+#windandspeed_link, #exclusivelaunch_link,#login_link,#register_link{
     opacity: 0.6;
     transition: transform 0.4s ease-in-out;
 }
@@ -136,13 +141,23 @@ body{
     opacity: 0.8;
 }
 
+#register_link:hover #animate_link2{
+    transform: translateX(0px);
+}
+
+#register_link:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
 .hamburger_menu{
     position: absolute;
     display: inline-block;
+    z-index: 5;
     width: 4%;
     height: 5%;
-    left: 93.5%;
-    top: 5%;
+    right: 2em;
+    top: 2em;
 }
 
 .bar1, .bar2, .bar3{
@@ -203,11 +218,11 @@ body{
 
 
 #content{
-    position: absolute;
+    position: relative;
     width: 50%;
-    top: 250px;
-    padding: 34px;
-    left: 120px;
+    top: 8rem;
+    z-index: 4;
+    left: 25%;
     transition: transform 2.5s ease;
     
 }
@@ -235,13 +250,16 @@ body{
 }
 
 #button{
-    position: absolute;
-    width: 34%;
-    height: 19%;
+    width: 35em;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 1000px;
-    left: 340px;
+    margin: 0 auto;
     background-color: #1f1f1f;
     overflow: hidden;
+    position: relative;
     animation: explore_bikes_button 1.5s;
 }
 
@@ -249,15 +267,26 @@ body{
     position: absolute;
     color: white;
     font-family: 'IBM Plex Sans Condensed';
-    font-size: 30px;
     letter-spacing: 3px;
-    left: 0px;
+    left: 100px;
     font-weight: 500;
+    margin: 0;
     padding-left: 20px;
     transition: left 0.6s;
     opacity: 0.7;
     cursor: pointer;
     animation: explore_bikes_text 1s;
+}
+
+#explore_bikes a{
+    left: 0px;
+    position: relative;
+    transition: left 0.6s;
+}
+
+#explore_bikes a:visited,#explore_bikes a:hover,#explore_bikes a:focus,#explore_bikes a:link{
+    color: white;
+    text-decoration: none;
 }
 
 #button_animate{
@@ -267,14 +296,13 @@ body{
     background: white;
     border-radius: 1000px;
     top: 0px;
-    left: 270px;
+    left: 460px;
     transition: left 0.56s;
 }
 
 #back_arrow{
     position: relative;
-    width: 20%;
-    top: 2px;
+    width: 6rem;
     opacity: 0.5;
     left: 2px;
     transition: transform 0.5s;
@@ -292,9 +320,9 @@ body{
 }
 
 
-#button:hover #explore_bikes{
+#button:hover #explore_bikes a{
     color: black;
-    left: 70px;
+    left: 5em;
 }
 
 #one,#two,#three,#four{
@@ -379,6 +407,7 @@ body{
     padding: 20px;
     height: 5%;
     top: 90%;
+    z-index: 5;
 }
 
 #slider1, #slider2, #slider3{
@@ -514,7 +543,7 @@ body{
     }
     to{
         transform: translateX(0px);
-        opacity: 0.78;
+        opacity: 0.5;
     }
 }
 
@@ -536,9 +565,27 @@ body{
     }
 }
 
-@media screen (max-width:600px){
+@media screen and (max-width:600px){
     #partOne{
         color: red;
+    }
+
+    #content {
+        width: 90%;
+        left: 5%;
+    }
+
+    #button {
+        width: 90%;
+    }
+
+    #explore_bikes {
+        width: 100%;
+        text-align: center;
+    }
+
+    #back_arrow, #button_animate {
+        display: none;
     }
 }
 

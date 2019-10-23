@@ -9,8 +9,8 @@ function slider1(){
     Slider1 = document.getElementById("slider1");
     Slider2 = document.getElementById("slider2");
     firstBg.style.transform = "translateX(0px)";
-    secondBg.style.transform = "translateX(1500px)";
-    content.style.transform = "translateX(-1600px)";
+    secondBg.style.transform = "translateX(1800px)";
+    content.style.transform = "translateX(-2500px)";
     setTimeout(function(){
         content.style.transform = "translateX(0px)";
         heading.innerHTML = "WHAT WE PROVIDE";
@@ -25,12 +25,12 @@ function slider2(){
     heading = document.getElementById("partOne");
     info = document.getElementById("info");
     firstBg.style.transform = "translateX(1500px)";
-    secondBg.style.transform = "translateX(-980px)";
+    secondBg.style.transform = "translateX(0px)";
     setTimeout(function(){
         content.style.transform = "translateX(0px)";
         heading.innerHTML = "DESIGN";
         info.innerHTML = "The perfect design that suits your day to day needs";
         
     },1000)
-    content.style.transform = "translateX(-1600px)";
+    content.style.transform = "translateX(-2500px)";
 }

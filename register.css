@@ -1,0 +1,76 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+body{
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+
+#background_image img{
+    position: absolute;
+    filter: grayscale(100);
+    opacity: 0.3;
+    padding: 0px;
+    margin: 0px;
+}
+
+#heading{
+    text-align: center;
+    display: block;
+    position: relative;
+    color: white;
+    font-size: 50px;
+    width: 80%;
+    margin-left: auto;
+    font-weight: 900;
+    margin-right: auto;
+    font-family: Inconsolata;
+    top: 25%;
+}
+
+#register_form #inputs{
+    position: relative;
+    display: grid;
+    width: 15%;
+    height: 30%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20%;
+}
+
+#inputs input{
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 200px;
+    border-radius: 1000px;
+    margin-top: 20px;
+    transform: scale(1);
+    background-color: black;
+    opacity: 0.5;
+    border: none;
+    font-size: 20px;
+    transition: background-color, transform, color 1.5s,1s,0.5s;
+}
+
+#submit{
+    clip-path: circle(20%);
+    transition: clip-path,transform 1s,0.6s ease;
+    border: 2px solid white;
+}
+
+
+#email:hover,#username:hover,#password:hover,#confirm_password:hover{
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+#submit:hover{
+    clip-path: circle(100%);
+    transform: scale(1.2);
+}
+
