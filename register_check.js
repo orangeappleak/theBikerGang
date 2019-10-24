@@ -1,7 +1,7 @@
 function register(){
-    var email = document.querySelector("#email").value;
+    var email = document.querySelector("#register_email").value;
     var username = document.querySelector("#username").value;
-    var password = document.querySelector("#password").value;
+    var password = document.querySelector("#register_password").value;
     var confirm_password = document.querySelector("#confirm_password").value;
     
     if(password == confirm_password){

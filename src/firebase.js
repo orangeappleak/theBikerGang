@@ -10,6 +10,11 @@ const FirebaseService = {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   },
     
+    on_current_userchange(callback){
+    
+            firebase.auth().onAuthStateChanged(callback);
+     
+    },
     updateUserName(displayName) {
 	const currentUser = FirebaseService.getCurrentUser();
     if(!currentUser) {

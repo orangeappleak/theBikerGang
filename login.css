@@ -2,23 +2,24 @@
     position: absolute;
     width: calc(90% - 10px);
     top: 0;
-    left: 3%;
-    border: 2px solid white;
+    left: 4.6%;
+    border: 10px solid white;
     height: 90%;
     transform: translateY(110vh);
-    border-radius: 90px;
+    border-radius: 40px;
     opacity: 0.1;
     display: block;
     overflow: hidden;
     transition: transform,opacity 1s,0.5s ease;
     z-index: 6;
-    background-image: url('unsplash%20walls/login_backwall.jpg');
+    background: black;;
     background-size: cover;
 }
 
 #login_backwall{
     position: absolute;
     width: 100%;
+    top: -20%;
     z-index: 6;
 }
 
@@ -31,14 +32,13 @@
     top: 100px;
     border-radius: 100px;
     z-index: 7;
-    display: flex;
-    flex-direction: row;
 }
 
 #exit img{
     position: absolute;
     opacity: 0.5;
     left: 48%;
+    width: 4%;
     top: 5%;
     transform: scale(1.3);
     transition: transform,opacity 0.2s,0.5s ease-in-out;
@@ -52,14 +52,15 @@
 }
 
 #panel_heading{
-    font-size: 90px;
+    position: relative;
+    height: 20%;
+    width: 100%;
+    font-size: 60px;
     text-align: center;
+    margin-left: auto;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 1;
-    font-family: 'Gochi Hand';
+    font-family: 'Ibm Plex Sans Condensed';
 }
 
 #login_info{
@@ -67,6 +68,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -60px;
     flex-direction: column;
     flex: 1;
 }
@@ -74,12 +77,12 @@
 #email, #password{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     background: black;
     color: white;
     border: 2px solid white;
     padding: 10px;
-    width: 60%;
+    width: 40%;
     opacity: 0.6;
     display: block;
     text-align: center;
@@ -89,7 +92,7 @@
 }
 
 #email:hover,#password:hover{
-    width: 60%;
+    width: 50%;
     opacity: 1;
 }
 
@@ -138,14 +141,16 @@
     width: 100%;
     font-size: 30px;
     color: white;
-    font-family: 'Incosolata';
+    font-family: 'Jockey One';
     font-weight: 100;
-    position: absolute;
+    position: relative;
     text-decoration: none;
     text-align: center;
     opacity: 0.4;
     bottom: 1em;
     transition: opacity 0.4s ease;
+    border: 2px solid white;
+    padding: 10px;
 }
 
 #register:hover{

@@ -19,10 +19,136 @@ html, body{
 #logo{
     position: relative;
     border-radius: 1000px;
-    height: 4em;
+    height: 3.5em;
     opacity: 0.85;
     transform: rotateY(180deg);
     animation: logo 1.5s;
+}
+
+#menu{
+    position: absolute;
+    width: 40%;
+    background-color: none;
+    opacity: 0.8;
+    height: 96%;
+    margin-top: 0.8%;
+    border-radius: 80px;
+    left: 94%;
+    overflow-x: hidden;
+    z-index:2;
+    transition: left,background-color,height,border 1s,0.7s ease;
+}
+
+#bars{
+    width: 5%;
+    opacity: 1;
+    position: relative;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+#bars_animate{
+    width: 150%;
+    height: 100%;
+    padding: 1px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    margin: 0px;
+    border-radius: 100px;
+}
+
+#bar1,#bar2,#bar3{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 50%;
+    padding: 1px;
+    margin-top: 10px;
+    background-color: white;
+    transition: transform,width 0.4s,0.7s;
+}
+
+#menu_heading{
+    border-bottom: 5px solid black;
+    text-align: center;
+    font-family: 'Jockey One';
+    font-size: 50px;
+    opacity: 0.8;
+    width: 100%;
+    top: 15px;
+    position: absolute;
+}
+
+#menu_links{
+    position: relative;
+    display: grid;
+    font-size: 60px;
+    top: 30px;
+    padding: 30px;
+    left: 0px;
+    text-align: center;
+    font-family: 'Inconsolata';
+}
+
+#menu_links a{
+    border-bottom: 5px solid black;
+    opacity: 0.6;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#home,#how_we_work,#contact,#meet_the_team{
+    position: relative;
+    transition: left,opacity 0.8s,0.6s ease;
+    left: 0px;
+}
+
+#home:hover,#how_we_work:hover,#contact:hover,#meet_the_team:hover{
+    left: 50px;
+    opacity: 1;
+}
+
+#social_media{
+    width: 90%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+}
+
+#icons{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#insta,#facebook,#twitter {
+    position: relative;
+    width: 10%;
+    height: 30%;
+    left: 35%;
+    filter: grayscale(100%);
+    transform: scale(0.8);
+    transition: filter,transform 1s,0.5s ease;
+    cursor: pointer;
+}
+
+#insta:hover,#facebook:hover,#twitter:hover{
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+#bars:hover #bar1{
+    width: 60%;
+}
+
+#bars:hover #bar3{
+    width: 70%;
 }
 
 #hashtag{
@@ -40,30 +166,40 @@ html, body{
 
 
 #background_image #firstBg{
-    position: fixed;
+    position: absolute;
     height: 100%;
     bottom: 0;
     right: 0;
     opacity: 0.5;
-    z-index: 2;
+    transform: translateX(0px);
     transition: transform 2.5s ease;
     animation: background_image 1s ease-in-out;
 }
 
 #background_image #secondBg{
     position: fixed;
-    width: 100%;
+    width: 78%;
     margin-left: 5%;
     bottom: 0;
     opacity: .5;
-    transform: translateX(500vw);
+    transform: translateX(100vw);
+    transition: transform 2.5s ease;
+    z-index: 1;
+}
+
+#background_image #thirdBg{
+    position: absolute;
+    width: 78%;
+    margin-left: 5%;
+    bottom: 0;
+    opacity: .5;
+    transform: translateX(100vw);
     transition: transform 2.5s ease;
     z-index: 1;
 }
 
 #nav_bar{
     position: absolute;
-    width: 100%;
     margin: 1em;
     display: flex;
     z-index: 4;
@@ -73,7 +209,7 @@ html, body{
 
 #links{
     display: flex;
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Inconsolata';
     padding: 20px;
     margin: 0px;
@@ -101,7 +237,7 @@ html, body{
 #animate_link2{
     width: 100%;
     height: 65%;
-    transform: translateX(-400px);
+    transform: translateX(-200px);
     justify-content: center;
     position: absolute;
     border-bottom: 2px solid white;
@@ -109,28 +245,15 @@ html, body{
     transition: transform 0.5s;
 }
 
-#windandspeed_link, #exclusivelaunch_link,#login_link,#register_link{
+#login_link,#register_link,#cart{
     opacity: 0.6;
     transition: transform 0.4s ease-in-out;
 }
 
-#windandspeed_link:hover #animate_link2{
-    transform: translateX(0px);
+#cart{
+    display: none;
 }
 
-#windandspeed_link:hover{
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-#exclusivelaunch_link:hover #animate_link2{
-    transform: translateX(0px);
-}
-
-#exclusivelaunch_link:hover{
-    transform: scale(1.2);
-    opacity: 0.8;
-}
 
 #login_link:hover #animate_link2{
     transform: translateX(0px);
@@ -150,80 +273,28 @@ html, body{
     opacity: 0.8;
 }
 
-.hamburger_menu{
-    position: absolute;
-    display: inline-block;
-    z-index: 5;
-    width: 4%;
-    height: 5%;
-    right: 2em;
-    top: 2em;
+#cart:hover #animate_link2{
+    transform: translateX(0px);
 }
 
-.bar1, .bar2, .bar3{
-    height: 10%;
-    width: 50%;
-    margin: 5.6px;
-    background: white;
-    position: relative;
-    border-radius: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width,color,transform,opacity 0.5s,0.6s,1s,1s ease-in-out;
-    pointer-events: none;
+#cart:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
 }
 
-.bar1{
-    animation: menu_bar1 0.5s ease-out;
+#username_heading{
+    font-size: 10px;
+    font-family: Inconsolata;
+    color: white;
 }
-
-.bar2{
-    animation: menu_bar2 0.7s ease-out;
-}
-
-.bar3{
-    animation: menu_bar3 1s ease-out;
-}
-
-#animate_menu1{
-    position: absolute;
-    background: white;
-    width: 2600%;
-    top: -90px;
-    left: -1800px;
-    height: 2500%;
-    clip-path: circle(0% at 1839px 108px);
-    transition: all 0.7s ease-in;
-    overflow: hidden;
-}
-
-#animate_menu2{
-    position: absolute;
-    background: pink;
-    opacity: 1;
-    width: 2600%;
-    top: -90px;
-    left: -1800px;
-    height: 2500%;
-    clip-path: circle(0% at 1839px 108px);
-    transition: all 0.7s ease;
-    overflow: hidden;
-    box-shadow: 10px 10px 80px black;
-}
-
-.hamburger_menu:hover #animate_menu2{
-    clip-path: circle(3% at 1839px 108px);
-    opacity: 1;
-}
-
 
 #content{
     position: relative;
     width: 50%;
-    top: 8rem;
+    top: 20rem;
     z-index: 4;
-    left: 25%;
-    transition: transform 2.5s ease;
+    left: 5%;
+    transition: transform 2s ease;
     
 }
 
@@ -233,33 +304,34 @@ html, body{
     color: white;
     text-align: center;
     opacity: 1;
-    font-size: 100px;
+    margin: 0px;
+    font-size: 80px;
     font-family: 'Jockey One';
     animation: content_heading 1s;
 }
 
 #content #info{
     position: relative;
-    top: -50px;
+    top: 0px;
     color: white;
     opacity: 0.7;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Inconsolata';
     animation: content_info 1s;
 }
 
 #button{
-    width: 35em;
-    height: 6rem;
+    width: 16em;
+    height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1000px;
     margin: 0 auto;
     background-color: #1f1f1f;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     animation: explore_bikes_button 1.5s;
 }
 
@@ -268,8 +340,9 @@ html, body{
     color: white;
     font-family: 'IBM Plex Sans Condensed';
     letter-spacing: 3px;
-    left: 100px;
+    left: -2px;
     font-weight: 500;
+    font-size: 20px;
     margin: 0;
     padding-left: 20px;
     transition: left 0.6s;
@@ -291,20 +364,18 @@ html, body{
 
 #button_animate{
     position: absolute;
-    width: 110%;
-    height: 100%;
+    width: 20em;
+    height: 3.5em;
     background: white;
     border-radius: 1000px;
-    top: 0px;
-    left: 460px;
+    left: 200px;
     transition: left 0.56s;
 }
 
 #back_arrow{
     position: relative;
-    width: 6rem;
+    width: 3.5rem;
     opacity: 0.5;
-    left: 2px;
     transition: transform 0.5s;
 }
 
@@ -322,82 +393,7 @@ html, body{
 
 #button:hover #explore_bikes a{
     color: black;
-    left: 5em;
-}
-
-#one,#two,#three,#four{
-    width: 10%;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    margin: 20px;
-    position: relative;
-    left: 120px;
-}
-
-#line{
-    position: absolute; 
-    background-color: black;
-    width: 80%;
-    height: 0.1%;
-    left: 150px;
-    margin-top: -10px;
-}
-
-#menu_links{
-    position: absolute;
-    color: black;
-    left: 550px;
-    top: 1px;
-    font-size: 100px;
-    width: 300%;
-    height: 100%;
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform,opacity 1s,0.5s ease;
-    opacity: 0.7;
-}
-
-#team_link{
-    position: absolute;
-    top: 35px;
-    left: 1200px;
-    font-size: 50px;
-    opacity: 0.5;
-    transition: opacity,transform 0.4s,0.6s;
-    cursor: pointer;
-}
-
-#menu_links:hover{
-    transform: scale(1.3);
-    opacity: 1;
-    color: black;
-}
-
-#team_link:hover{
-    opacity: 1;
-    transform: scale(1.3);
-}
-
-
-#social_media{
-    position: relative;
-    overflow: hidden;
-    top: 6.5%;
-}
-
-#social_media img{
-    opacity: 0.6;
-    position: relative;
-    left: 75%;
-    filter: grayscale(100%);
-    transition: transform,opacity,filter 0.5s,0.5s,0.5s;
-}
-
-#social_media img:hover{
-    filter: grayscale(0);
-    transform: scale(1.2);
-    opacity: 1;
+    left: 2em;
 }
 
 #sliders{
@@ -410,6 +406,10 @@ html, body{
     z-index: 5;
 }
 
+#slider1{
+    pointer-events: none;
+}
+
 #slider1, #slider2, #slider3{
     opacity: 0.6;
     position: relative;
@@ -418,7 +418,7 @@ html, body{
     height: 40%;
     border-radius: 1000px;
     background-color: white;
-    left: 39%;
+    left: 47%;
     transform: scale(0.7);
     transition: transform,opacity 1s,0.5s;
     cursor: pointer;
@@ -429,14 +429,66 @@ html, body{
     opacity: 1;
 }
 
-#divide_line{
+#register_window{
+    position: absolute;
+    width: 30%;
+    height: 68%;
+    top: 100%;
+    margin-left: 34%;
+    border: 2px solid white;
+    background-color: black;
+    z-index: 7;
+    border-radius: 40px;
+    transition: top 0.6s ease;
+}
+
+#register_panel_exit img{
     position: relative;
-    left: 733px;
-    top: 9px;
-    width: 5%;
-    height: 4%;
-    opacity: 0.4;
-    background-color: white; 
+    width:10%;
+    margin-left: 45%;
+    
+}
+
+#register_heading{
+    color: white;
+    padding: 2px;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Jockey One';
+}
+
+#register_info input{
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    position: relative;
+    font-size: 17px;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 500px;
+    color: white;
+    width: 40%;
+    padding: 10px;
+    opacity: 0.6;
+    transition: width,opacity 0.4s,0.8s ease;
+}
+
+#register_info input:hover{
+    width: 60%;
+    opacity: 1;
+}
+
+#register_submit{
+    position: absolute;
+    transform: scale(1);
+    transition: background,color,transform 1s,0.5s,0.6s ease;
+}
+
+#register_submit:hover{
+    background: white;
+    color: black;
+    transform: scale(1.2);
 }
 
 @keyframes body_opacity{
@@ -505,36 +557,6 @@ html, body{
     }
 }
 
-@keyframes menu_bar1{
-    from{
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes menu_bar2{
-    from{
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes menu_bar3{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
 
 @keyframes background_image{
     from{
@@ -547,14 +569,6 @@ html, body{
     }
 }
 
-@keyframes menu_links_animate{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 0.66;
-    }
-}
 
 @keyframes logo{
     from{
