@@ -84,7 +84,7 @@ const FirebaseService = {
    * @param {string} productId 
    */
   getProduct(productId) {
-    return firebase.firestore().getDb().collection('products').doc(productId).get();
+    return firebase.firestore().collection('products').doc(productId).get();
   },
 
   /**
@@ -103,7 +103,7 @@ const FirebaseService = {
       return Promise.reject('User not signed in: unable to load wishlist');
     }
     return new Promise((resolve, reject) => {
-      firebase.firestore().getDb().collection('wishlist')
+      firebase.firestore().collection('wishlist')
         .where('userId', '==', currentUser.uid).get()
         .then(querySnapshot => {
           let wishlist = [];
@@ -159,7 +159,7 @@ const FirebaseService = {
       return Promise.reject('User not signed in: unable to get cart');
     }
     return new Promise((resolve, reject) => {
-      firebase.firestore().getDb().collection('cartlines')
+      firebase.firestore().collection('cartlines')
         .where('userId', '==', currentUser.uid).get()
         .then(querySnapshot => {
           let cartLines = [];
@@ -213,7 +213,7 @@ const FirebaseService = {
       FirebaseService.__manageError('User not signed in: unable to modify quantity of cart');
       return Promise.reject('User not signed in: unable to modify quantity of cart');
     }
-    return firebasefirestore().getDb().collection('cartlines').doc(cartLineId).update({quantity});
+    return firebasefirestore().collection('cartlines').doc(cartLineId).update({quantity});
   },
 
   // ERROR MANAGEMENT
