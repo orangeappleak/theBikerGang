@@ -22,21 +22,20 @@
         
     </head>
     <body>
-        <div id="menu">
-            <div id="bars">
+         <div id="bars">
                 <div id="bars_animate" onclick="open_menu()">
                     <div id="bar1"></div>
                     <div id="bar2"></div>
                     <div id="bar3"></div>
                 </div>
             </div>
+        <div id="menu">
             <h1 id="menu_heading">MENU</h1>
             <div id="menu_links">
+                <div><h1 id="back_text2">Bicycles are Awesome</h1></div>
                 <a id="home">HOME</a>
                 <a id="how_we_work">HOW WE WORK</a>
-                <a id="contact">CONTACT</a>
                 <a id="meet_the_team">MEET THE TEAM</a>
-                    
             </div>
             <div id="social_media">
                 <div id="icons">
@@ -91,10 +90,10 @@ Wonder how we make them ? check out how our BIKES are made.</p>
         </div>
         <h1 id="hashtag">#windandspeed</h1>
 
-        <div id="sliders">
-            <div id="slider1" onclick="slider1()"></div>
-            <div id="slider2" onclick="slider2()"></div>
-            <div id="slider3" onclick="slider3()"></div>
+        <div id="sliders" onclick = "sliders(this)">
+            <div id="slider1"></div>
+            <div id="slider2"></div>
+            <div id="slider3"></div>
         </div>
         <div id="login_window">
             <img id="login_backwall" src="unsplash%20walls/login_backwall%20(2).jpg">
@@ -117,7 +116,7 @@ Wonder how we make them ? check out how our BIKES are made.</p>
             <div id="register_heading">
                 <h1>Please fill in the following details</h1>
             </div>
-            <form id="register_info" onsubmit="register()">
+            <form id="register_info" onsubmit="register();return false">
                 <input id="register_email" type="email" required placeholder="Email">
                 <input id="username" type="text" required placeholder="username">
                 <input id="register_password" type="password" required placeholder="Password">

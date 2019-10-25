@@ -7,7 +7,7 @@ function open_menu(){
     var bar2 = document.getElementById("bar2");
     var bar3 = document.getElementById("bar3");
     if(count%2==0){
-        menu.style.left = "60%";
+        menu.style.left = "70%";
         menu.style.backgroundColor = "white";
         bar1.style.backgroundColor = "black";
         bar2.style.backgroundColor = "black";
@@ -17,7 +17,7 @@ function open_menu(){
         bar3.style.transform = "rotate(-45deg) translateY(-7px) translateX(7px)";
     }
     else{
-        menu.style.left = "94%";
+        menu.style.left = "100%";
         menu.style.backgroundColor = "black";
         bar1.style.backgroundColor = "white";
         bar2.style.backgroundColor = "white";

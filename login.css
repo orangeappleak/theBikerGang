@@ -1,9 +1,9 @@
 #login_window{
     position: absolute;
-    width: calc(90% - 10px);
+    width: 40%;
     top: 0;
-    left: 4.6%;
-    border: 10px solid white;
+    margin-left: 28%; 
+    border: 2px solid white;
     height: 90%;
     transform: translateY(110vh);
     border-radius: 40px;
@@ -12,14 +12,14 @@
     overflow: hidden;
     transition: transform,opacity 1s,0.5s ease;
     z-index: 6;
-    background: black;;
+    background: black;
     background-size: cover;
 }
 
 #login_backwall{
     position: absolute;
     width: 100%;
-    top: -20%;
+    top: 35%;
     z-index: 6;
 }
 
@@ -37,8 +37,8 @@
 #exit img{
     position: absolute;
     opacity: 0.5;
-    left: 48%;
-    width: 4%;
+    left: 49.5%;
+    width: 6%;
     top: 5%;
     transform: scale(1.3);
     transition: transform,opacity 0.2s,0.5s ease-in-out;
@@ -55,7 +55,7 @@
     position: relative;
     height: 20%;
     width: 100%;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     margin-left: auto;
     color: white;
@@ -64,7 +64,7 @@
 }
 
 #login_info{
-    padding: 50px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,8 +81,8 @@
     background: black;
     color: white;
     border: 2px solid white;
-    padding: 10px;
-    width: 40%;
+    padding: 2px;
+    width: 60%;
     opacity: 0.6;
     display: block;
     text-align: center;
@@ -92,13 +92,13 @@
 }
 
 #email:hover,#password:hover{
-    width: 50%;
+    width: 80%;
     opacity: 1;
 }
 
 #email:focus, #password:focus{
     outline: none;
-    width: 60%;
+    width: 80%;
     transform: scale(1.07);
     opacity: 1;
 }
@@ -147,7 +147,6 @@
     text-decoration: none;
     text-align: center;
     opacity: 0.4;
-    bottom: 1em;
     transition: opacity 0.4s ease;
     border: 2px solid white;
     padding: 10px;
@@ -168,14 +167,24 @@
 }
 
 
-@media screen and (max-width: 1200px) {
-    #username, #password, #submit{
-        width: 100%;
+@media screen and (max-width: 1300px) {
+    #register{
+        top: -60px;
+        font-size: 16px;
     }
-    #panel {
-        flex-direction: column;
-    }
+    
     #panel_heading{
-        font-size: 65px;
+        width: 100%;
+        font-size: 36px;
+    }
+    
+    #email,#password{
+        width: 60%;
+        font-size: 20px;
+    }
+    
+    #submit_button{
+        width: 100%;
+        font-size: 16px;
     }
 }

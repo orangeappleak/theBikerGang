@@ -1,8 +1,8 @@
 var count1 = 0;
 
 function login_panel(){
-    panel = document.getElementById("login_window");
-    login_link = document.getElementById("login_link");
+    var panel = document.getElementById("login_window");
+    var login_link = document.getElementById("login_link");
     if(count1%2 == 0){
         panel.style.transform = "translateY(40px)";
         panel.style.opacity = "0.98";
@@ -11,7 +11,6 @@ function login_panel(){
     else if(count1%2!=0){
         panel.style.transform = "translateY(110vh)"
         panel.style.opacity = "0.1";
-        animate_menu2.style.pointerEvents = "auto";
     }
     count1++;
 }

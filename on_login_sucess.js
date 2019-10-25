@@ -4,11 +4,13 @@ function on_login_success(){
     var login = document.querySelector("#login_link a");
     var username = FirebaseService.getCurrentUser().displayName;
     var username_heading = document.getElementById("username_heading");
+    var panel = document.getElementById("login_window");
     username_heading.innerHTML = username;
     login.innerHTML = "Log Out";
     login.setAttribute("onclick","FirebaseService.signOut()");
     register.style.display = "none";
     cart.style.display = "block";
+    panel.style.transform = "translateY(110vh)";
 }
 
 function on_logout_success(){
@@ -16,8 +18,11 @@ function on_logout_success(){
     var register = document.getElementById("register_link");
     var login = document.querySelector("#login_link a");
     document.getElementById("username_heading").innerHTML = "";
+    setTimeout(function(){
+    alert("logging you out");
     cart.style.display = "none";
     login.innerHTML = "Log In";
     login.setAttribute("onclick","login_panel()");
     register.style.display = "block";
+    },1000);
 }
