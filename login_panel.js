@@ -28,7 +28,7 @@ FirebaseService.on_current_userchange(function(user){
     if(user!=null){
         on_login_success();
     }
-    else{
+    else if(user == null){
         on_logout_success();
     }
 });

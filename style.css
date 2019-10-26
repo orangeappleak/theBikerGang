@@ -182,7 +182,7 @@ html, body{
     height: 100%;
     bottom: 0;
     right: 0;
-    opacity: 0.5;
+    opacity: 0.7;
     transform: translateX(0px);
     transition: transform 2.5s ease;
     animation: background_image 1s ease-in-out;
@@ -190,10 +190,10 @@ html, body{
 
 #background_image #secondBg{
     position: fixed;
-    width: 78%;
+    width: 90%;
     margin-left: 5%;
     bottom: 0;
-    opacity: .5;
+    opacity: .8;
     transform: translateX(100vw);
     transition: transform 2.5s ease;
     z-index: 1;
@@ -201,7 +201,7 @@ html, body{
 
 #background_image #thirdBg{
     position: absolute;
-    width: 78%;
+    width: 90%;
     margin-left: 5%;
     bottom: 0;
     opacity: .5;
@@ -213,6 +213,7 @@ html, body{
 #nav_bar{
     position: absolute;
     margin: 1em;
+    width: 90%;
     display: flex;
     z-index: 4;
     align-items: center;
@@ -295,7 +296,11 @@ html, body{
 }
 
 #username_heading{
-    font-size: 10px;
+    opacity: 0.6;
+    position: relative;
+    top: 4px;
+    margin-left: 50em;
+    font-size: 20px;
     font-family: Inconsolata;
     color: white;
 }
@@ -418,28 +423,32 @@ html, body{
     z-index: 5;
 }
 
-#slider1{
-    pointer-events: none;
-}
-
-#slider1, #slider2, #slider3{
+.slider{
     opacity: 0.6;
     position: relative;
     display: inline-block;
     width: 2.6%;
-    height: 40%;
+    height: 20%;
+    margin-left: 2%;
     border-radius: 1000px;
-    background-color: white;
-    left: 47%;
-    transform: scale(0.7);
-    transition: transform,opacity 1s,0.5s;
+    border: 2px solid white;
+    left: 42%;
+    transform: scale(1);
+    transition: transform,opacity,background-color 1s,0.5s;
     cursor: pointer;
 }
 
-#slider1:hover, #slider2:hover, #slider3:hover{
-    transform: scale(1);
+.slider:hover{
+    transform: scale(1.2);
     opacity: 1;
 }
+
+.active{
+    transform: scale(1.2);
+    opacity: 1;
+    background-color: white;
+}
+
 
 #register_window{
     position: absolute;
@@ -583,7 +592,7 @@ html, body{
     }
     to{
         transform: translateX(0px);
-        opacity: 0.5;
+        opacity: 0.7;
     }
 }
 
@@ -604,15 +613,38 @@ html, body{
     }
     
     #links{
-        font-size: 20px;
+        font-size: 18px;
     }
     
     #content{
-        top: 15rem;
+        top: 14rem;
     }
     
     #content #partOne{
-        font-size: 70px;
+        font-size: 50px;
+    }
+    
+    #content #info{
+        font-size: 15px;
+    }
+    
+    #button{
+        width: 36%;
+    }
+    
+    #button_animate{
+        left: 175px;
+        height: 100%;
+    }
+    
+    #back_arrow{
+        width: 14%;
+        top: 5px;
+        left: 5px;
+    }
+    
+    #explore_bikes{
+        font-size: 15px;
     }
     
     #register_heading{

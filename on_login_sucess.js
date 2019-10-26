@@ -5,7 +5,7 @@ function on_login_success(){
     var username = FirebaseService.getCurrentUser().displayName;
     var username_heading = document.getElementById("username_heading");
     var panel = document.getElementById("login_window");
-    username_heading.innerHTML = username;
+    username_heading.innerHTML = "logged in as:"+username;
     login.innerHTML = "Log Out";
     login.setAttribute("onclick","FirebaseService.signOut()");
     register.style.display = "none";
@@ -19,7 +19,6 @@ function on_logout_success(){
     var login = document.querySelector("#login_link a");
     document.getElementById("username_heading").innerHTML = "";
     setTimeout(function(){
-    alert("logging you out");
     cart.style.display = "none";
     login.innerHTML = "Log In";
     login.setAttribute("onclick","login_panel()");
