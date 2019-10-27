@@ -9,23 +9,20 @@ const FirebaseService = {
   signIn(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   },
-    
-    on_current_userchange(callback){
-    
-            firebase.auth().onAuthStateChanged(callback);
-     
-    },
-    updateUserName(displayName) {
-	const currentUser = FirebaseService.getCurrentUser();
+  on_current_userchange(callback) {
+      firebase.auth().onAuthStateChanged(callback); 
+  },
+  updateUserName(displayName) {
+	  const currentUser = FirebaseService.getCurrentUser();
     if(!currentUser) {
       FirebaseService.__manageError('User not signed in: unable to update username');
       return Promise.reject('User not signed in: unable to update username');
     }
 	
-	return currentUser.updateProfile({
-		displayName
-	});
-},
+	  return currentUser.updateProfile({
+		  displayName
+	  });
+  },
   signOut() {
     return firebase.auth().signOut();
   },
