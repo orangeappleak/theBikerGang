@@ -1,0 +1,58 @@
+#cartlines {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+}
+
+#cartlines li {
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#cartlines li .product {
+  flex: 1;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#cartlines li .product .product_image {
+  height: 5rem;
+  display: block;
+}
+
+#cartlines li .quantity {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#cartlines li .quantity button {
+  vertical-align: middle;
+  border: 0;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+#cartlines li .remove {
+  flex: 1;
+}
+
+#cartlines li .remove button {
+  border: 0;
+  background-color: #FF5555;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  #cartlines {
+    width: 95%;
+  }
+}
