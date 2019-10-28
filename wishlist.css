@@ -1,0 +1,45 @@
+#wishlist {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+}
+
+#wishlist li {
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#wishlist li .product {
+  flex: 1;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#wishlist li .product .product_image {
+  height: 5rem;
+  display: block;
+}
+
+#wishlist li .remove {
+  flex: 1;
+}
+
+#wishlist li .remove button {
+  border: 0;
+  background-color: #FF5555;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  #wishlist {
+    width: 95%;
+  }
+}
