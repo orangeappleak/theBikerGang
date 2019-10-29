@@ -1,17 +1,17 @@
 (function() {
-    var products_div = document.querySelector("#products");
+    var products_div = document.querySelector(".products");
     FirebaseService.getAllProducts().then(function(products){
         var html = "";
+        var count3=0;
         Object.keys(products).forEach(function(key){
-            html+=`<div class="product">
-<div id="images">
+            html+=`<div class="product${count3}">
+<h1 class="product_heading">${products[key].name}</h1>
+<div class="images">
     <img class="product_image" src="${products[key].image}">
-    <div id="links">
-    <a id="buynow">Buy Now<>
 </div>
-</div>
-<h1 id="product_heading">${products[key].name}</h1></div>`
+</div>`
+            count3++;
         })
-        products_div.innerHTML = html;
+        document.getElementById("bikes").innerHTML = html;
     })
 })();

@@ -3,7 +3,7 @@
     width: 40%;
     top: 0;
     margin-left: 28%; 
-    border: 2px solid white;
+    border: 0.5px solid white;
     height: 90%;
     transform: translateY(110vh);
     border-radius: 40px;
@@ -18,8 +18,9 @@
 
 #login_backwall{
     position: absolute;
-    width: 100%;
-    top: 35%;
+    width: 80%;
+    left: 15%;
+    top: 51%;
     z-index: 6;
 }
 
@@ -147,7 +148,7 @@
     text-decoration: none;
     text-align: center;
     opacity: 0.4;
-    transition: opacity 0.4s ease;
+    transition: opacity,transform 0.4s,1s ease;
     border: 2px solid white;
     padding: 10px;
 }

@@ -7,6 +7,7 @@ function on_login_success(){
     var panel = document.getElementById("login_window");
     username_heading.innerHTML = "logged in as:"+username;
     login.innerHTML = "Log Out";
+    login.style.transform = "translateY(-400px)";
     login.setAttribute("onclick","FirebaseService.signOut()");
     register.style.display = "none";
     cart.style.display = "block";

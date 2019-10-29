@@ -1,4 +1,8 @@
-(function() {
+function renderWishlist() {
+  if(!FirebaseService.getCurrentUser()) {
+    console.warn('Can\'t render wishlist: no user yet');
+    return;
+  }
   var wishlist_div = document.querySelector("#wishlist");
   FirebaseService.getWishList().then(function(wishlistLines){
     FirebaseService.getAllProductsForIdList(Object.keys(wishlistLines).map(wishlistLineKey => wishlistLines[wishlistLineKey].productId))
@@ -15,10 +19,17 @@
   <span class="remove">
     <button onclick="FirebaseService.removeFromWishList(${wishlistLineKey})">X</button>
   </span>
-</li>`
+</li>`;
         });
+        if(!Object.keys(wishlistLines).length) {
+          html += "<li>No items in your wishlist yet!</li>";
+        }
         wishlist_div.innerHTML = html;
       })
       .catch(FirebaseService.__manageError);
-  })
+  });
+}
+
+(function() {
+  FirebaseService.on_current_userchange(renderWishlist);
 })();

@@ -7,10 +7,11 @@ function register(){
     if(password == confirm_password){
         FirebaseService.createUser(email, password)
             .then(function() {console.log('user registered');
-            FirebaseService.updateUserName(username).then(function(){
-                console.log(FirebaseService.getCurrentUser().displayName);
-            })})
+            FirebaseService.updateUserName(username)})
             .catch(FirebaseService.__manageError);
+        register_info = document.getElementsByName("register_info")[0];
+        register_info.reset();
+        close_register_panel();
     }
     
     else{

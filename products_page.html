@@ -1,18 +1,78 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="products_page.css">
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <script src="home.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
         <script src="src/params.inc.js"></script>
         <script src="src/firebase.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        
     </head>
 
     <body>
-        <h1 id="heading">The fabulous bicycles catalogue</h1>
-        <div id="products"></div>
+        <script>
+            AOS.init();
+        </script>
+        <div id="bars">
+                <div id="bars_animate" onclick="open_menu()">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                </div>
+            </div>
+        <img id="logo" src="unsplash%20walls/logo14.jpg">
+        <div id="menu">
+            <h1 id="menu_heading">MENU</h1>
+            <div id="menu_links">
+                <div><h1 id="back_text2">Bicycles are Awesome</h1></div>
+                <a id="home" href="theBikerGang.html">HOME</a>
+                <a id="how_we_work">HOW WE WORK</a>
+                <a id="meet_the_team">MEET THE TEAM</a>
+            </div>
+            <div id="social_media">
+                <div id="icons">
+                    <img id="insta" src="unsplash%20walls/icons8-instagram-512.png">
+                    <img id="facebook" src="unsplash%20walls/icons8-facebook-512.png">
+                    <img id="twitter" src="unsplash%20walls/icons8-twitter-512.png">
+                </div>
+            </div>
+        </div>
+        <div id="basic_img_container" data-aos="fade-up" data-aos-duration="1200">
+            <h1 id="explore_bikes_heading" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">EXPLORE BIKES</h1>
+            <img id="basic_img" src="unsplash%20walls/products_page_back2.jpg">
+            <img id="scroll_down_image" src="unsplash%20walls/up_arrow.png">
+            <h1 id="scroll_down">Scroll Down</h1>
+        </div>
         <script src="products.js"></script>
+        <h1 id="trending_bikes" data-aos="fade-right" data-aos-delay="300" data-aos-duration="900">TRENDING BIKES RIGHT NOW</h1>
+        <div id="basic_info" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+            <div id="basic_info1">
+                <img id="basic_info1_image" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000" src="unsplash%20walls/basic_info1_image.png"> 
+                <div id="basic_info1_para" data-aos="fade-right" data-aos-delay="800" data-aos-duration="900">
+                    <h1>THE FELT</h1>
+                    <P>experience comfort and grip will you ride on rough,hard and rocky terrains.</P>
+                    <div id="felt_buy_now"><h1 id="buy_now_heading">Buy Now</h1></div>
+                    <div id="felt_add_to_cart"><h1 id="felt_add_to_cart_heading">Add to Cart</h1></div>
+                </div>
+            </div>
+            <div id="basic_info2">
+                <img id="basic_info2_image"  data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000" src="unsplash%20walls/basic.png">  
+                <div id="basic_info2_para"  data-aos="fade-left" data-aos-delay="800" data-aos-duration="900">
+                    <h1>THE LIVAL</h1>
+                    <P>for a smoother road and easy riding,handling can be great on highways</P>
+                    <div id="lival_buy_now"><h1 id="lival_buy_now_heading">Buy Now</h1></div>
+                    <div id="lival_add_to_cart"><h1 id="lival_add_to_cart_heading">Add To Cart</h1></div>
+                </div>
+            </div>
+        </div>
+        <div id="bikes">
+            
+        </div>
+        
     </body>
 </html>

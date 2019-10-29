@@ -39,9 +39,9 @@ function slider1(){
     setTimeout(function(){
             content.style.transform = "translateX(0px)"
             partOne.innerHTML = "WHAT WE PROVIDE";
-            info.innerHTML = "We provide some of the best hand made Bicycles that you can enjoy your ride on. Wonder how we make them ? check out how our BIKES are made.";
+            info.innerHTML = "We provide some of the best hand made Bicycles that you can enjoy your ride on.</br>                 Wonder how we make them ? check out how our BIKES are made.";
         },1000);
-        content.style.transform = "translateX(-1280px)"
+        content.style.transform = "translateX(-1300px)";
 }
 function slider2(){
     document.getElementById("slider2").click();
@@ -69,7 +69,7 @@ function slider2(){
             partOne.innerHTML = "DESIGN";
             info.innerHTML = "Design is not just what it looks like and feels like. Design is how it works.";
         },1000);
-        content.style.transform = "translateX(-1280px)"
+        content.style.transform = "translateX(-1300px)";
 }
 function slider3(){
     document.getElementById("slider3").click();
@@ -94,7 +94,7 @@ function slider3(){
             setTimeout(function(){
             content.style.transform = "translateX(0px)"
             partOne.innerHTML = "EXPERIENCE";
-            info.innerHTML = "Experience the Wind and Speed by riding one of the finest bikes ever made.Explore the bike the most suites you and your personality.";
+            info.innerHTML = "Experience the Wind and Speed by riding one of the finest bikes ever made.</br>          Explore the bike the most suites you and your personality.";
         },1000);
-        content.style.transform = "translateX(-1280px)"
+        content.style.transform = "translateX(-1300px)";
 }

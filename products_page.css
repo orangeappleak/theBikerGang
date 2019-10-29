@@ -1,64 +1,268 @@
+@import 'https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed';
+@import 'https://fonts.googleapis.com/css?family=Bungee Inline';
+@import 'https://fonts.googleapis.com/css?family=Gochi Hand';
+@import 'https://fonts.googleapis.com/css?family=Jockey One';
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
 body{
+    margin: 0px;
     background-color: black;
+    overflow-x: hidden;
 }
 
-#heading{
-    color: white;
-    text-align: center;
+#logo{
+    position: absolute;
+    border-radius: 1000px;
+    height: 3.5em;
+    opacity: 0.85;
+    transform: rotateY(180deg);
+    top: 22px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #424242;
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 1000px;
+}
+
+#basic_img_container{
+    top: 90px;
+    padding: none;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#basic_img{
+    position: absolute;
+    width: 100%;
+    top: -360px;
+    opacity: 0.6;
+    z-index: -2;
+}
+
+#scroll_down_image{
+    opacity: 0.5;
+    position: absolute;
+    margin-left: 49%;
+    transform: rotate(180deg);
+    top: 70%;
+    width: 7%;
+}
+
+#scroll_down{
+    position: absolute;
+    opacity: 0.7;
+    top: 80%;
+    font-family: 'Gochi Hand';
+    margin-left: 48.5%;
+}
+
+#explore_bikes_heading{
+    position: absolute;
+    top: 20%;
+    margin-left: 26%;
     font-size: 100px;
+    color: white;
+}
+
+#trending_bikes{
+    position: relative;
+    top: 15%;
+    color: white;
+    font-family: 'Jockey One';
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+#basic_info{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 55%;
+    background: #c9c9c9;
+    overflow: hidden;
+}
+
+#basic_info1{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-right: 4px solid black;
+}
+
+#basic_info1_image{
+    left: -250px;
+    position: absolute;
+    width: 90%;
+}
+
+#basic_info1_para{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 10%;
+    left: 56%;
+    text-align: center;
+    
+}
+
+#basic_info1_para h1{
+    position: relative;
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family:'Gochi Hand';
+}
+
+#basic_info1_para p{
+    font-size: 25px;
     font-family: 'Jockey One';
 }
 
-.product{
+#felt_buy_now{
     position: relative;
-    width: 100%;
-    height: 30%;
-    display: inline-grid;
-    box-shadow: 0px 0px 40px black;
-    margin-top: 80px;
-    margin-bottom: 20em;
-    animation: animate 1s ease;
+    width: 50%;
+    height: 10%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width,background 0.5s,0.5s;
+    cursor: pointer;
 }
 
-#product_heading{
-    text-align: center;
+#felt_buy_now #buy_now_heading{
+    position: relative;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    top: 25%;
+    transition: color 1s ease;
+    pointer-events: none;
+}
+
+#felt_buy_now:hover,#felt_add_to_cart:hover{
+    width: 60%;
+    background:black;
+}
+
+#felt_buy_now:hover #buy_now_heading,#felt_add_to_cart:hover #felt_add_to_cart_heading{
     color: white;
 }
 
-.product img{
-    width: 50%;
+#felt_add_to_cart{
     position: relative;
-    margin-left: 25%;
-    left: 0px;
-    opacity: 0.6;
-    margin-right: auto;
-    transform: scale(1);
-    border:2px solid black;
-    transition: opacity,transform 1s,0.6s ease;
-    border-radius: 50px;
-}
-
-.product img:hover{
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-#links{
-    position: absolute;
     width: 50%;
-    height: 30%;
-    margin-left: 25%;
-    top: 17em;
-    border: 2px solid red;
+    height: 10%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width,background 0.5s,0.5s;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-@keyframes animate{
-    from{
-        top: -200px;
-        opacity: 0.2;
-    }
-    to{
-        top: 0px;
-        opacity: 1;
-    }
+#felt_add_to_cart #felt_add_to_cart_heading{
+    position: relative;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    top: 25%;
+    transition: color 1s ease;
+    pointer-events: none;
+}
+
+
+#basic_info2{
+    position: absolute;
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+}
+
+#basic_info2_image{
+    position: absolute;
+    width: 80%;
+    top: 35px;
+    left: 370px;
+}
+
+#basic_info2_para{
+    position: absolute;
+    width: 41%;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    text-align: center;
+    
+}
+
+#basic_info2_para h1{
+    position: relative;
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family:'Gochi Hand';
+}
+
+#basic_info2_para p{
+    font-size: 25px;
+    font-family: 'Jockey One';
+}
+
+#lival_buy_now{
+    position: relative;
+    width: 50%;
+    height: 10%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width,background 0.5s,0.5s;
+    cursor: pointer;
+    display: block;
+}
+
+#lival_buy_now #lival_buy_now_heading{
+    position: relative;
+    font-size: 20px;
+    top: -3px;
+    transition: color 1s ease;
+    pointer-events: none;
+}
+
+#lival_buy_now:hover,#lival_add_to_cart:hover{
+    width: 60%;
+    background:black;
+}
+
+#lival_buy_now:hover #lival_buy_now_heading,#lival_add_to_cart:hover #lival_add_to_cart_heading{
+    color: white;
+}
+
+#lival_add_to_cart{
+    position: relative;
+    width: 50%;
+    height: 10%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width,background 0.5s,0.5s;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+}
+
+#lival_add_to_cart #lival_add_to_cart_heading{
+    position: relative;
+    font-size: 20px;
+    top: -3px;
+    transition: color 1s ease;
+    pointer-events: none;
 }

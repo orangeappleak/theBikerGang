@@ -4,6 +4,7 @@
         <title>The Biker Gang</title>
         <link rel = "stylesheet" href = "style.css">
         <link rel = "stylesheet" href = "login.css">
+        <link rel = "stylesheet" href = "menu.css">
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
@@ -33,7 +34,7 @@
             <h1 id="menu_heading">MENU</h1>
             <div id="menu_links">
                 <div><h1 id="back_text2">Bicycles are Awesome</h1></div>
-                <a id="home">HOME</a>
+                <a id="home" href="theBikerGang.html">HOME</a>
                 <a id="how_we_work">HOW WE WORK</a>
                 <a id="meet_the_team">MEET THE TEAM</a>
             </div>
@@ -69,7 +70,7 @@
                 <div id="cart">
                     <div id="animate_link">
                         <div id="animate_link2"></div>
-                        <a href="#" onclick="">Cart</a>
+                        <a href="cart.html">Cart</a>
                     </div>
                 </div>
             </div>
@@ -116,12 +117,13 @@ Wonder how we make them ? check out how our BIKES are made.</p>
             <div id="register_heading">
                 <h1>Please fill in the following details</h1>
             </div>
-            <form id="register_info" onsubmit="register();return false">
+            <form name="register_info" id="register_info" onsubmit="register();return false">
+                <img id="register_back" src="unsplash%20walls/sign-in-2.png">
                 <input id="register_email" type="email" required placeholder="Email">
                 <input id="username" type="text" required placeholder="username">
                 <input id="register_password" type="password" required placeholder="Password">
                 <input id="confirm_password" type="password" required placeholder="Confirm Password">
-                <input id="register_submit" type="submit" value="Register">
+                <input id="register_submit_button" type="submit" value="Register">
             </form>
         </div>
     </body>

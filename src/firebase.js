@@ -215,7 +215,7 @@ const FirebaseService = {
       FirebaseService.__manageError('User not signed in: unable to modify quantity of cart');
       return Promise.reject('User not signed in: unable to modify quantity of cart');
     }
-    return firebasefirestore().collection('cartlines').doc(cartLineId).update({quantity});
+    return firebase.firestore().collection('cartlines').doc(cartLineId).update({quantity});
   },
 
   // ERROR MANAGEMENT

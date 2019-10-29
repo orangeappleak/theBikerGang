@@ -14,4 +14,5 @@ function register_window(){
 function close_register_panel(){
     register_panel = document.getElementById("register_window");
     register_panel.style.top = "100%";
+    count2--;
 }
