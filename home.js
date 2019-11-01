@@ -29,3 +29,7 @@ function open_menu(){
     }
     count++;
 }
+
+function buy_now(){
+    alert("button clicked");
+}
