@@ -51,7 +51,7 @@ body{
 }
 
 #scroll_down_image{
-    opacity: 0.5;
+    opacity: 1;
     position: absolute;
     margin-left: 49%;
     transform: rotate(180deg);
@@ -77,7 +77,7 @@ body{
 
 #trending_bikes{
     position: relative;
-    top: 15%;
+    top: 10%;
     color: white;
     font-family: 'Jockey One';
     letter-spacing: 5px;
@@ -89,7 +89,7 @@ body{
     top: 100px;
     width: 100%;
     height: 55%;
-    background: #c9c9c9;
+    background: white;
     overflow: hidden;
 }
 
@@ -265,4 +265,323 @@ body{
     top: -3px;
     transition: color 1s ease;
     pointer-events: none;
+}
+
+
+#bike_products::-webkit-scrollbar-thumb{
+    background-color: #cecece;
+    border-radius: 0px;
+}
+
+#bike_products::-webkit-scrollbar-track{
+    background-color: grey;
+}
+
+#bike_products{
+    top: 25%;
+    position: relative;
+    display: flex;
+    width: 95%;
+    left: 3%;
+    background-color: white;
+    border-radius: 30px 30px 0px 0px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 200px;
+}
+
+#bike_products img{
+    padding: 40px 0px 40px 0px;
+    width: 90%;
+    margin-left: 600px;
+    border-radius: 40px;
+    position: relative;
+}
+
+#overlay{
+    position: absolute;
+    width: 28%;
+    left: 5%;
+    height: 84%;
+    top: 2.6%;
+    border-radius: 200px 0px 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#overlay_back{
+    position: relative;
+    left: -600px;
+}
+
+#overlay_bike_products{
+    left: 15%;
+    width: 20%;
+    position: absolute;
+    top: 16%;
+}
+
+#overlay_heading{
+    color: orange;
+    font-size: 100px;
+    position: relative;
+    font-family: 'IBM Plex Sans Condensed';
+    top: -50px;
+}
+
+#amazing_infos{
+    position: relative;
+    width: 94%;
+    top: 300px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+}
+
+#amazing_info1,#amazing_info2,#amazing_info3{
+    width: 99.7%;
+    height: 70%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#amazing_info1_image{
+    width: 100%;
+}
+
+#amazing_info1_part{
+    position: absolute;
+    top: 100px;
+    width: 28%;
+    height: 50%;
+}
+
+#amazing_info1_part_heading h1{
+    font-size: 100px;
+    color: white;
+    border-bottom: 10px solid white;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info1_part_para p{
+    position: absolute;
+    top: 190px;
+    color: white;
+    width: 110%;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info1_part_para #read_more{
+    position: relative;
+    top: 63px;
+    width: 50%;
+    height: 20%;
+    border: 2px solid white;
+    transition: width,background-color 0.6s,1s ease;
+}
+
+#read_more h1{
+    color: white;
+    pointer-events: none;
+    font-size: 26px;
+    font-family: 'IBM Plex Sans Condensed';
+    text-align: center;
+    transition: color 1s ease;
+}
+
+#amazing_info1_part_para #read_more:hover{
+    background-color: white;
+    width: 60%;
+}
+
+#read_more:hover h1{
+    color: black;
+}
+
+#amazing_info2_image{
+    top: -150px;
+    width: 100%;
+    position: relative;
+}
+
+#amazing_info2_part{
+    position: absolute;
+    top: 100px;
+    width: 28%;
+    height: 50%;
+    left: 625px;
+    top: 0px;
+    text-align: center;
+}
+
+#amazing_info2_part_heading h1{
+    font-size: 100px;
+    color: black;
+    position: relative;
+    left: 4%;
+    text-align: center;
+    border-bottom: 10px solid black;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info2_part_para p{
+    position: absolute;
+    top: 190px;
+    font-weight: 600;
+    color: black;
+    width: 110%;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info2_part_para #read_more2{
+    position: relative;
+    top: 40px;
+    width: 50%;
+    height: 20%;
+    left: 26px;
+    border: 2px solid black;
+    transition: width,background-color 0.6s,1s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#read_more2 h1{
+    color: black;
+    pointer-events: none;
+    font-size: 26px;
+    font-family: 'IBM Plex Sans Condensed';
+    text-align: center;
+    transition: color 1s ease;
+}
+
+#amazing_info2_part_para #read_more2:hover{
+    background-color: black;
+    width: 60%;
+}
+
+#read_more2:hover h1{
+    color: white;
+}
+
+
+#amazing_info3_image{
+    top: -100px;
+    width: 100%;
+    position: relative;
+}
+
+#amazing_info3_part{
+    position: absolute;
+    top: 100px;
+    width: 28%;
+    height: 50%;
+    left: 5%;
+    top: 0px;
+    text-align: center;
+}
+
+#amazing_info3_part_heading h1{
+    font-size: 100px;
+    color: black;
+    position: relative;
+    width: 110%;
+    text-align: center;
+    border-bottom: 10px solid black;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info3_part_para p{
+    position: absolute;
+    top: 190px;
+    color: black;
+    width: 110%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans Condensed';
+}
+
+#amazing_info3_part_para #read_more3{
+    position: relative;
+    top: 80px;
+    width: 50%;
+    left: 18.5px;
+    height: 20%;
+    border: 2px solid black;
+    transition: width,background-color 0.6s,1s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#read_more3 h1{
+    color: black;
+    pointer-events: none;
+    font-size: 26px;
+    font-family: 'IBM Plex Sans Condensed';
+    text-align: center;
+    transition: color 1s ease;
+}
+
+#amazing_info3_part_para #read_more3:hover{
+    background-color: black;
+    width: 60%;
+}
+
+#read_more3:hover h1{
+    color: white;
+}
+
+@media screen and (max-width: 1300px){
+    #basic_img{
+        width: 105%;
+    }
+    
+    #explore_bikes_heading{
+        font-size: 60px;
+        left: 80px;
+    }
+    
+    #scroll_down_image{
+        top: 60%;
+        opacity: 1;
+    }
+    
+    #scroll_down{
+        top: 70%;
+        left: -1.5%;
+    }
+    
+    #basic_info{
+        top: 60px;
+        margin-bottom: 100px;
+    }
+    
+    #basic_info1_para h1,#basic_info2_para h1{
+        font-size: 40px;
+    }
+    
+    #basic_info1_para p,#basic_info2_para p{
+        font-size: 18px;
+    }
+    
+    #basic_info1_para,#basic_info2_para{
+        height: 50%;
+    }
+    
+    #felt_buy_now,#felt_add_to_cart,#lival_buy_now,#lival_add_to_cart{
+        height: 15%;
+    }
+    
+    #felt_buy_now #buy_now_heading,#felt_add_to_cart #felt_add_to_cart_heading{
+        font-size: 20px;
+        top: 10%;
+        
+    }
+    
+    #lival_buy_now #lival_buy_now_heading,#lival_add_to_cart #lival_add_to_cart_heading{
+        top: -10px;
+    }
 }

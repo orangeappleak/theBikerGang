@@ -533,14 +533,23 @@ html, body{
         font-size: 36px;
     }
     
-    #menu_links{
+    #menu_links a{
         top: -10px;
-        font-size: 40px;
+        font-size: 47px;
     }
     
     #icons{
         top: -30px;
     }
+    
+    #register_info input{
+        padding: 1px;
+        margin-top: 10px;
+    }
 }
+
+
+
+
 
 

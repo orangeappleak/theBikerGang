@@ -146,3 +146,18 @@
 #bars:hover #bar3{
     width: 50%;
 }
+
+@media screen and (max-width: 1300px){
+    #menu_heading{
+        font-size: 36px;
+    }
+    
+    #menu_links a{
+        top: -10px;
+        font-size: 47px;
+    }
+    
+    #icons{
+        top: -30px;
+    }
+}
