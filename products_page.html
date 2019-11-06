@@ -11,6 +11,7 @@
         <script src="src/firebase.js"></script>
         <script src="login_check.js"></script>
         <script src="on_login_sucess.js"></script>
+        <script src="amazing_infos.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        
@@ -19,6 +20,14 @@
     <body>
         <script>
             AOS.init();
+            FirebaseService.on_current_userchange(function(user){
+                if(!!user){
+                   document.getElementById("user_name").innerHTML = "logged in as:"+user.displayName;
+                }
+                else{
+                    document.getElementById("user_name").innerHTML = "";
+                }
+            });
         </script>
         <div id="bars">
                 <div id="bars_animate" onclick="open_menu()">
@@ -28,6 +37,7 @@
                 </div>
             </div>
         <img id="logo" src="unsplash%20walls/logo14.jpg">
+        <h1 id="user_name"></h1>
         <div id="menu">
             <h1 id="menu_heading">MENU</h1>
             <div id="menu_links">
@@ -79,9 +89,60 @@
                     </div>
                     <div id="amazing_info1_part_para">
                         <p>Shimano GRX 1x11 gears and Mavic Allroad Disc wheels: an Alpine gravel pass-stormer</p>
-                        <div id="read_more">
+                        <div id="read_more" onclick="amazing_info_one()">
                             <h1> READ MORE </h1>
                         </div>
+                    </div>
+                </div>
+                <div id="read_more_overlay">
+                    <div id="read_more_overlay_images">
+                        <img id="read_more_image1" src="unsplash%20walls/read_more_overlay1.jpg">
+                        <img id="read_more_image1" src="unsplash%20walls/read_more_overlay2.jpg">
+                        <img id="read_more_image1" src="unsplash%20walls/read_more_overlay3.jpg">
+                        <img id="read_more_image1" src="unsplash%20walls/read_more_overlay4.jpg">
+                    </div>
+                    <p id="read_more_info">In the early days of Alpine road racing the roads were often little more than dirt tracks - which means that the Tour de France riders of nearly a century ago would probably have given up a limb for one of our Nuroad SLs. With the pace and comfort of our Attain road race series and the handling and ruggedness of one of our Cross Race bikes, its DNA is pure racing tradition. Featuring Shimano's new 1x11 GRX transmission with a wide-ranging 11-42 tooth cassette, our product engineers have selected a range of components that are designed for one purpose: to boost your speed. From the 40mm Kevlar tyres - wide, grippy, comfortable and light - to the hydraulic disc brakes and Mavic Allroad Disc wheelset, this is an uncompromisingly rapid gravel machine. The frame features all the benefits of our Nuroad series, including neat internal cable routing and a geometry that makes handling the variable grip of unsurfaced roads easier. We even fitted a full carbon fork, which saves weight and adds to ride comfort. Wherever you're heading this weekend, however remote or rough the road surface, the Nuroad SL has got your back. Where will it take you next?</p>
+                    <h1 id="components_heading">Components</h1>
+                    <div id="components">
+                        <table id="components_list" style="width: 50%">
+                            <tr>
+                                <td>FRAME</td>
+                                <td>HPA, High Performance Aluminium, CUBE Nuroad Disc, Carbon</td>
+                            </tr>
+                            <tr>
+                                <td>REAR DERAILLEUR</td>
+                                <td>Shimano GRX, 11-42T, 1x11</td>
+                            </tr>
+                            <tr>
+                                <td>BRAKE SYSTEM</td>
+                                <td>Shimano GRX BR-RX810</td>
+                            </tr>
+                            <tr>
+                                <td>CRANKSET</td>
+                                <td>Shimano GRX, 40T</td>
+                            </tr>
+                            <tr>
+                                <td>COLOR</td>
+                                <td>titanium´n´orange</td>
+                            </tr>
+                            <tr>
+                                <td>WHEELSET</td>
+                                <td>Mavic Allroad Disc</td>
+                            </tr>
+                            <tr>
+                                <td>WEIGHT</td>
+                                <td>9, 8 kg</td>
+                            </tr>
+                            <tr>
+                                <td>ART. NO</td>
+                                <td>123456789</td>
+                            </tr>
+                            <tr>
+                                <td>PRICE</td>
+                                <td>n/a</td>
+                            </tr>
+                        </table>
+                        <img id="geometry" src="unsplash%20walls/geometry.png">
                     </div>
                 </div>
             </div>
