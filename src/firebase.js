@@ -10,7 +10,7 @@ const FirebaseService = {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   },
   on_current_userchange(callback) {
-      firebase.auth().onAuthStateChanged(callback); 
+      !!callback && firebase.auth().onAuthStateChanged(callback); 
   },
   updateUserName(displayName) {
 	  const currentUser = FirebaseService.getCurrentUser();
@@ -180,7 +180,7 @@ const FirebaseService = {
   addCartLine(productId, quantity) {
     const currentUser = FirebaseService.getCurrentUser();
     if(!currentUser) {
-      FirebaseService.__manageError('User not signed in: unable to add to cart');
+      alert('User not signed in: unable to add to cart');
       return Promise.reject('User not signed in: unable to add to cart');
     }
     return firebase.firestore().collection('cartlines').add({

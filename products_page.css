@@ -32,13 +32,32 @@ body{
     border-radius: 1000px;
 }
 
+#current_user{
+    position: relative;
+    width: 25%;
+    height: 4%;
+    top: 30px;
+    left: 130px;
+}
+
+#username_heading{
+    opacity: 0.6;
+    position: relative;
+    opacity: 0.3;
+    font-size: 20px;
+    font-family: Inconsolata;
+    color: white;
+    pointer-events: none;
+    text-decoration: underline;
+}
+
 #basic_img_container{
     top: 90px;
     padding: none;
     margin: 0px;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 50%;
     overflow: hidden;
 }
 
@@ -50,27 +69,12 @@ body{
     z-index: -2;
 }
 
-#scroll_down_image{
-    opacity: 1;
-    position: absolute;
-    margin-left: 49%;
-    transform: rotate(180deg);
-    top: 70%;
-    width: 7%;
-}
-
-#scroll_down{
-    position: absolute;
-    opacity: 0.7;
-    top: 80%;
-    font-family: 'Gochi Hand';
-    margin-left: 48.5%;
-}
 
 #explore_bikes_heading{
     position: absolute;
+    width: 100%;
+    text-align: center;
     top: 20%;
-    margin-left: 26%;
     font-size: 100px;
     color: white;
 }
@@ -85,13 +89,21 @@ body{
 }
 
 #basic_info{
-    opacity: 0.76;
+    opacity: 0.8;
     position: relative;
     top: 100px;
     width: 100%;
     height: 55%;
-    background: white;
+    background: black;
+    color: white;
     overflow: hidden;
+    transition: opacity,color,background-color 1s,0.8s,1s ease;
+}
+
+#basic_info:hover{
+    opacity: 0.9;
+    color: black;
+    background-color: white;
 }
 
 #basic_info1{
@@ -102,7 +114,7 @@ body{
 }
 
 #basic_info1_image{
-    left: -250px;
+    left: -290px;
     position: absolute;
     width: 90%;
 }
@@ -110,8 +122,7 @@ body{
 #basic_info1_para{
     position: absolute;
     width: 40%;
-    height: 80%;
-    top: 10%;
+    top: 25%;
     left: 56%;
     text-align: center;
     
@@ -129,59 +140,6 @@ body{
     font-family: 'Jockey One';
 }
 
-#felt_buy_now{
-    position: relative;
-    width: 50%;
-    height: 10%;
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width,background 0.5s,0.5s;
-    cursor: pointer;
-}
-
-#felt_buy_now #buy_now_heading{
-    position: relative;
-    font-size: 20px;
-    padding: 0px;
-    margin: 0px;
-    top: 25%;
-    transition: color 1s ease;
-    pointer-events: none;
-}
-
-#felt_buy_now:hover,#felt_add_to_cart:hover{
-    width: 60%;
-    background:black;
-}
-
-#felt_buy_now:hover #buy_now_heading,#felt_add_to_cart:hover #felt_add_to_cart_heading{
-    color: white;
-}
-
-#felt_add_to_cart{
-    position: relative;
-    width: 50%;
-    height: 10%;
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width,background 0.5s,0.5s;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-#felt_add_to_cart #felt_add_to_cart_heading{
-    position: relative;
-    font-size: 20px;
-    padding: 0px;
-    margin: 0px;
-    top: 25%;
-    transition: color 1s ease;
-    pointer-events: none;
-}
-
-
 #basic_info2{
     position: absolute;
     margin-left: 50%;
@@ -193,14 +151,13 @@ body{
     position: absolute;
     width: 80%;
     top: 35px;
-    left: 370px;
+    left: 450px;
 }
 
 #basic_info2_para{
     position: absolute;
     width: 41%;
-    height: 80%;
-    top: 10%;
+    top: 25%;
     left: 2%;
     text-align: center;
     
@@ -218,96 +175,46 @@ body{
     font-family: 'Jockey One';
 }
 
-#lival_buy_now{
-    position: relative;
-    width: 50%;
-    height: 10%;
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width,background 0.5s,0.5s;
-    cursor: pointer;
-    display: block;
-}
-
-#lival_buy_now #lival_buy_now_heading{
-    position: relative;
-    font-size: 20px;
-    top: -3px;
-    transition: color 1s ease;
-    pointer-events: none;
-}
-
-#lival_buy_now:hover,#lival_add_to_cart:hover{
-    width: 60%;
-    background:black;
-}
-
-#lival_buy_now:hover #lival_buy_now_heading,#lival_add_to_cart:hover #lival_add_to_cart_heading{
-    color: white;
-}
-
-#lival_add_to_cart{
-    position: relative;
-    width: 50%;
-    height: 10%;
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width,background 0.5s,0.5s;
-    cursor: pointer;
-    display: block;
-    margin-top: 15px;
-}
-
-#lival_add_to_cart #lival_add_to_cart_heading{
-    position: relative;
-    font-size: 20px;
-    top: -3px;
-    transition: color 1s ease;
-    pointer-events: none;
-}
-
-
-#bike_products::-webkit-scrollbar-thumb{
-    background-color: #cecece;
-    border-radius: 0px;
-}
-
-#bike_products::-webkit-scrollbar-track{
-    background-color: grey;
-}
-
 #bike_products{
-    top: 25%;
+    top: 20%;
     position: relative;
     display: flex;
+    padding-bottom: 60px;
     width: 100%;
+    height: 48%;
     background-color: white;
     border-radius: 30px 30px 0px 0px;
-    overflow-x: scroll;
-    overflow-y: hidden;
     margin-bottom: 200px;
-    opacity: 0.7;
+    opacity: 0.9;
+}
+
+#products_heading{
+    position: relative;
+    top: 25%;
+    color: white;
+    font-family: 'Jockey One';
+    letter-spacing: 5px;
+    font-size: 28px;
 }
 
 
 .product_name h1{
     position: relative;
-    left: 98%;
     font-size: 35px;
     opacity: 0.6;
+    left: -10px;
     font-family: 'Inconsolata';
-    top: 60px;
+    top: 20px;
     text-align: center;
 }
 
 #bike_products img{
     padding: 40px 0px 40px 0px;
     width: 90%;
-    margin-left: 600px;
+    top: -50px;
     border-radius: 40px;
     position: relative;
+    display: flex;
     opacity: 1;
     transform: scale(1);
     transition: transform 1s ease;
@@ -315,47 +222,42 @@ body{
 
 .buy_now{
     position: absolute;
-    width: 30%;
+    width: 40%;
     height: 10%;
-    top: 460px;
-    left: 132%;
+    left: 27%;
+    top: 375px;
     border: 2px solid black;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
-.buy_now h1{
+.add_to_cart{
+    position: absolute;
+    top: 450px;
+    width: 40%;
+    height: 10%;
+    left: 27%;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.buy_now:hover,.add_to_cart:hover{
+    background-color: black;
+}
+
+.buy_now:hover h1,.add_to_cart:hover h1{
+    color: white;
+}
+
+.buy_now h1,.add_to_cart h1{
     position: absolute;
     text-align: center;
-    top: 3px;
+    top: -1px;
     font-size: 20px;
+    pointer-events: none;
     width: 101%;
     font-family: 'IBM Plex Sans Condensed';
-}
-
-#overlay{
-    position: absolute;
-    width: 28%;
-    left: 5%;
-    height: 84%;
-    top: 2.6%;
-    text-align: center;
-    overflow: hidden;
-}
-
-#overlay_bike_products{
-    left: 15%;
-    width: 20%;
-    position: absolute;
-    top: 16%;
-}
-
-#overlay_heading{
-    color: black;
-    font-size: 100px;
-    position: relative;
-    left: -50px;
-    font-family: 'IBM Plex Sans Condensed';
-    top: -50px;
 }
 
 #amazing_infos{
@@ -472,7 +374,7 @@ body{
     width: 50%;
     height: 20%;
     left: 26px;
-    border: 2px solid black;
+    border: 3px solid black;
     transition: width,background-color 0.6s,1s ease;
     margin-left: auto;
     margin-right: auto;
@@ -539,7 +441,7 @@ body{
     width: 50%;
     left: 18.5px;
     height: 20%;
-    border: 2px solid black;
+    border: 3px solid black;
     transition: width,background-color 0.6s,1s ease;
     margin-left: auto;
     margin-right: auto;

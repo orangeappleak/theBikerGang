@@ -7,11 +7,17 @@
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
         <script src="src/params.inc.js"></script>
         <script src="src/firebase.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        
     </head>
 
     <body>
-        <h1 id="heading">Your cart</h1>
+        <script>
+            AOS.init();
+        </script>
+        <img id="cart_background" src="unsplash%20walls/cart_back2.jpg">
+        <h1 id="heading" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">Your cart</h1>
         <ul id="cartlines"></ul>
         <script src="cart.js"></script>
     </body>

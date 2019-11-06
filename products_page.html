@@ -9,6 +9,8 @@
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
         <script src="src/params.inc.js"></script>
         <script src="src/firebase.js"></script>
+        <script src="login_check.js"></script>
+        <script src="on_login_sucess.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        
@@ -45,19 +47,15 @@
         <div id="basic_img_container" data-aos="fade-up" data-aos-duration="1200">
             <h1 id="explore_bikes_heading" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">EXPLORE BIKES</h1>
             <img id="basic_img" src="unsplash%20walls/products_page_back2.jpg">
-            <img id="scroll_down_image" src="unsplash%20walls/up_arrow.png">
-            <h1 id="scroll_down">Scroll Down</h1>
         </div>
         <script src="products.js"></script>
-        <h1 id="trending_bikes" data-aos="fade-right" data-aos-delay="300" data-aos-duration="900">TRENDING BIKES RIGHT NOW</h1>
-        <div id="basic_info" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+        <h1 id="trending_bikes" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">TRENDING BIKES RIGHT NOW</h1>
+        <div id="basic_info" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
             <div id="basic_info1">
                 <img id="basic_info1_image" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000" src="unsplash%20walls/basic_info1_image.png"> 
                 <div id="basic_info1_para" data-aos="fade-right" data-aos-delay="800" data-aos-duration="900">
                     <h1>THE FELT</h1>
                     <P>experience comfort and grip will you ride on rough,hard and rocky terrains.</P>
-                    <div id="felt_buy_now"><h1 id="buy_now_heading">Buy Now</h1></div>
-                    <div id="felt_add_to_cart"><h1 id="felt_add_to_cart_heading">Add to Cart</h1></div>
                 </div>
             </div>
             <div id="basic_info2">
@@ -65,11 +63,10 @@
                 <div id="basic_info2_para"  data-aos="fade-left" data-aos-delay="800" data-aos-duration="900">
                     <h1>THE LIVAL</h1>
                     <P>for a smoother road and easy riding,handling can be great on highways</P>
-                    <div id="lival_buy_now"><h1 id="lival_buy_now_heading">Buy Now</h1></div>
-                    <div id="lival_add_to_cart"><h1 id="lival_add_to_cart_heading">Add To Cart</h1></div>
                 </div>
             </div>
         </div>
+         <div id="products_heading"><h1>MOUNTAIN BIKES</h1></div>
         <div id="bike_products">
             <div id="products"></div>
         </div>
@@ -110,7 +107,7 @@
                     </div>
                     <div id="amazing_info3_part_para">
                         <p>Bicycles that handle well on any terrain and raod making it easier for the rider reach higher boundaries.
-</p>
+                        </p>
                         <div id="read_more3">
                             <h1> READ MORE </h1>
                         </div>
